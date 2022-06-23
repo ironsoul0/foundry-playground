@@ -34,5 +34,7 @@ contract BrainNFTTest is Test {
 
         vm.expectRevert("OWNER_ONLY");
         bitToken.setBurner(address(nft));
+
+        emit log_named_address("NFTAddress:", address(nft));
     }
 }
